@@ -50,8 +50,8 @@
       
       - card_image_urls.each do |image_url|
         .col.col--span-4
-          .card
-            .card__hd
+          %article.card
+            %header.card__hd
               .card__img-container
                 %img.card__img{src: image_url}
             .card__bd
