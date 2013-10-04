@@ -44,26 +44,15 @@
     .card-group__hd
       %h3 Images of food
     .card-group__bd.row
-      .col.col--span-4
-        .card
-          .card__hd
-            .card__img-container
-              %img.card__img{src: 'http://media.lonelyplanet.com/lpi/19063/19063-10/469x264.jpg'}
-          .card__bd
-            %p Perhaps not the healthiest streetside breakfast, a piled-high plate of perfect arepas is hard to beat
-
-      .col.col--span-4
-        .card
-          .card__hd
-            .card__img-container
-              %img.card__img{src: 'http://media.lonelyplanet.com/lpi/3808/3808-1/681x454.jpg'}
-          .card__bd
-            %p Perhaps not the healthiest streetside breakfast, a piled-high plate of perfect arepas is hard to beat
-
-      .col.col--span-4
-        .card
-          .card__hd
-            .card__img-container
-              %img.card__img{src: 'http://media.lonelyplanet.com/lpi/5478/5478-45/681x454.jpg'}
-          .card__bd
-            %p Perhaps not the healthiest streetside breakfast, a piled-high plate of perfect arepas is hard to beat
+      - card_image_urls = ['http://media.lonelyplanet.com/lpi/19063/19063-10/469x264.jpg',
+        'http://media.lonelyplanet.com/lpi/3808/3808-1/681x454.jpg',
+        'http://media.lonelyplanet.com/lpi/5478/5478-45/681x454.jpg']
+      
+      - card_image_urls.each do |image_url|
+        .col.col--span-4
+          .card
+            .card__hd
+              .card__img-container
+                %img.card__img{src: image_url}
+            .card__bd
+              %p Perhaps not the healthiest streetside breakfast, a piled-high plate of perfect arepas is hard to beat
