@@ -1,32 +1,5 @@
-- footer_navigation = ['Section1', 'Section2', 'Section3', 'Section4', 'Section5', 'Section6']
-%footer
+%footer.app__ft
   .container.row
-    %nav.col.col--span-3
-      %h3 Another nav
-      %ul
-        - footer_navigation.each do |item|
-          %li
-            %a{href: '#'}
-              = item
-
-    %nav.col.col--span-3
-      %h3 Another nav
-      %ul
-        - footer_navigation.each do |item|
-          %li
-            %a{href: '#'}
-              = item
-    %nav.col.col--span-3
-      %h3 Another nav
-      %ul
-        - footer_navigation.each do |item|
-          %li
-            %a{href: '#'}
-              = item
-    %nav.col.col--span-3
-      %h3 Another nav
-      %ul
-        - footer_navigation.each do |item|
-          %li
-            %a{href: '#'}
-              = item
+    - 4.times do
+      .col.col--span-3
+        = haml :footer_nav

@@ -135,36 +135,37 @@ img {
   color: #133944;
 }
 
-footer {
+.app__ft {
   font-family: arial;
   overflow: hidden;
   font-size: 12px;
   background-color: #e5ebee;
   margin-top: 50px;
-  padding-top: 20px;
+  padding: 20px 0;
 }
-footer nav {
+
+.v-nav {
   margin-bottom: 20px;
 }
-footer h3 {
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-footer ul {
+.v-nav ul {
   margin: 0;
   padding: 0;
 }
-footer ul li {
+.v-nav li {
   margin: 0;
-  display: block;
   padding: 10px 0;
 }
-footer a {
+.v-nav a {
   text-decoration: none;
   color: #1e344c;
 }
-footer a:hover {
+.v-nav a:hover {
   text-decoration: underline;
+}
+
+.v-nav__hd {
+  text-transform: uppercase;
+  text-transform-margin-bottom: 20px;
 }
 
 .logo {
