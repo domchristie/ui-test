@@ -21,11 +21,6 @@ img {
   max-width: 100%;
 }
 
-.container {
-  width: 1000px;
-  margin: 0 auto;
-}
-
 .row:before, .row:after {
   content: "";
   display: table;
@@ -89,6 +84,11 @@ img {
 
 .col--span-1 {
   width: 6.5%;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .nav {
