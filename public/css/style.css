@@ -17,9 +17,78 @@ h3 {
   color: #133944;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   width: 1000px;
   margin: 0 auto;
+}
+
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.col {
+  float: left;
+  margin-left: 1%;
+}
+.col:first-child {
+  margin-left: 0;
+}
+
+.col--span-12 {
+  width: 100%;
+}
+
+.col--span-11 {
+  width: 91.5%;
+}
+
+.col--span-10 {
+  width: 83%;
+}
+
+.col--span-9 {
+  width: 74.5%;
+}
+
+.col--span-8 {
+  width: 66%;
+}
+
+.col--span-7 {
+  width: 57.5%;
+}
+
+.col--span-6 {
+  width: 49%;
+}
+
+.col--span-5 {
+  width: 40.5%;
+}
+
+.col--span-4 {
+  width: 32%;
+}
+
+.col--span-3 {
+  width: 23.5%;
+}
+
+.col--span-2 {
+  width: 15%;
+}
+
+.col--span-1 {
+  width: 6.5%;
 }
 
 .navigation {
@@ -91,8 +160,6 @@ footer {
   padding-top: 20px;
 }
 footer nav {
-  float: left;
-  width: 25%;
   margin-bottom: 20px;
 }
 footer h3 {
@@ -161,20 +228,6 @@ footer a:hover {
 
 .images-container {
   margin-top: 50px;
-  overflow: hidden;
-}
-
-.first-image, .second-image, .third-image {
-  float: left;
-  width: 30%;
-  margin-right: 5%;
-}
-.first-image img, .second-image img, .third-image img {
-  max-width: 100%;
-}
-
-.third-image {
-  margin-right: 0;
 }
 
 .image-container {
