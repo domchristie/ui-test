@@ -20,7 +20,7 @@ $ ->
         false
 
 
-      lightbox : $('.images-container').on 'click', 'img', ->
+      lightbox : $('.card__img-container').on 'click', 'img', ->
         image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'))
         lightboxContainer = $('<div/>').addClass('lightbox').append(image)
 

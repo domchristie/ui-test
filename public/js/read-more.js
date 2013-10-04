@@ -19,7 +19,7 @@
           }
           return false;
         }),
-        lightbox: $('.images-container').on('click', 'img', function() {
+        lightbox: $('.card__img-container').on('click', 'img', function() {
           var image, lightboxContainer;
 
           image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'));
