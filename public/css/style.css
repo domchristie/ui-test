@@ -8,6 +8,10 @@ ul {
   list-style: none;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 h1 {
   font-size: 20px;
 }
@@ -141,19 +145,16 @@ img {
   font-size: 12px;
   background-color: #e5ebee;
   margin-top: 50px;
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
-.v-nav {
-  margin-bottom: 20px;
-}
 .v-nav ul {
   margin: 0;
   padding: 0;
 }
 .v-nav li {
-  margin: 0;
-  padding: 10px 0;
+  margin: 0 0 20px;
+  padding: 0;
 }
 .v-nav a {
   text-decoration: none;
@@ -165,7 +166,7 @@ img {
 
 .v-nav__hd {
   text-transform: uppercase;
-  margin-bottom: 20px;
+  padding: 32px 0;
 }
 
 .logo {
@@ -213,6 +214,10 @@ img {
 
 .card-group {
   margin-top: 50px;
+}
+
+.card-group__hd {
+  padding: 20px 0;
 }
 
 .card__hd {
