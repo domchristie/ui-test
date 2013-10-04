@@ -47,7 +47,7 @@ img {
 
 .col {
   float: left;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 .col:first-child {
   margin-left: 0;
