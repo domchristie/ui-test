@@ -2,14 +2,14 @@
 - secondary_navigation = ['Images', 'Video', 'Games']
 
 %img.logo{src: "images/logo.png"}
-%nav.nav.nav--primary
+%nav.h-nav.h-nav--primary
   %ul
     - primary_navigation.each do |item|
       %li
         %a{href: '#'}
           = item
 
-%nav.nav.nav--secondary
+%nav.h-nav.h-nav--secondary
   %ul
     - secondary_navigation.each do |item|
       %li

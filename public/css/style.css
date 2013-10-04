@@ -91,47 +91,47 @@ img {
   margin: 0 auto;
 }
 
-.nav {
+.h-nav {
   font-family: arial;
   text-align: center;
 }
-.nav ul {
+.h-nav ul {
   height: 60px;
   margin: 0;
   padding: 0;
 }
-.nav ul li {
+.h-nav li {
   display: inline-block;
   height: 60px;
   margin: 0;
 }
-.nav a {
+.h-nav a {
   text-decoration: none;
   line-height: 60px;
   padding: 0 15px;
 }
-.nav a:hover {
+.h-nav a:hover {
   text-decoration: underline;
 }
 
-.nav--primary {
+.h-nav--primary {
   background-color: #124385;
 }
-.nav--primary li {
+.h-nav--primary li {
   width: 150px;
 }
-.nav--primary li:nth-child(3) {
+.h-nav--primary li:nth-child(3) {
   margin-right: 150px;
 }
-.nav--primary a {
+.h-nav--primary a {
   color: white;
 }
 
-.nav--secondary {
+.h-nav--secondary {
   margin-bottom: 60px;
   background-color: #e5ebee;
 }
-.nav--secondary a {
+.h-nav--secondary a {
   color: #133944;
 }
 
