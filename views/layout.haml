@@ -1,7 +1,10 @@
-%html
+%html.no-js
   %head
     %title Lonely Planet UI Test
     %link{rel: "stylesheet", href: 'css/style.css'}
+    :javascript
+      var htmlEl = document.documentElement;
+      htmlEl.className = htmlEl.className.replace(/\s*no-js/, 'js');
     %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
     %script{src: 'js/read-more.js'}
 
