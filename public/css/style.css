@@ -196,6 +196,12 @@ img {
   text-decoration: none;
 }
 
+.js .read-more-container {
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
 .lightbox {
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
@@ -220,7 +226,7 @@ img {
 }
 
 .article__bd h2 {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .card-group {
