@@ -210,10 +210,11 @@ img {
   right: 0;
   bottom: 0;
 }
-.lightbox .lightboxImage {
+
+.lightbox__content {
   position: absolute;
-  left: 30%;
-  top: 30%;
+  top: 50%;
+  left: 50%;
   border: 10px solid white;
 }
 

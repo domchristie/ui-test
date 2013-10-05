@@ -1,9 +1,4 @@
 (function() {
-  window.LP = {};
-
-}).call(this);
-
-(function() {
   LP.lightbox = (function() {
     var $content, $document, $overlay, close, open, setContent, _positionContent;
 
@@ -51,32 +46,5 @@
       setContent: setContent
     };
   })();
-
-}).call(this);
-
-(function() {
-  $(function() {
-    return window.LP = (function() {
-      var initialHeight;
-
-      initialHeight = 400;
-      return {
-        open: $('.button').on('click', function() {
-          if ($('.read-more-container').height() > 400) {
-            $('.read-more-container').animate({
-              height: initialHeight
-            }, 500);
-            $(this).text('Read more');
-          } else {
-            $('.read-more-container').animate({
-              height: 1600
-            }, 500);
-            $(this).text('Read less');
-          }
-          return false;
-        })
-      };
-    })();
-  });
 
 }).call(this);

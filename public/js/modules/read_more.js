@@ -18,17 +18,6 @@
             $(this).text('Read less');
           }
           return false;
-        }),
-        lightbox: $('.card__img-container').on('click', 'img', function() {
-          var image, lightboxContainer;
-
-          image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'));
-          lightboxContainer = $('<div/>').addClass('lightbox').append(image);
-          return $('body').append(lightboxContainer).on('keyup', function(e) {
-            if (e.keyCode === 13 || e.keyCode === 27) {
-              return $('.lightbox').remove();
-            }
-          });
         })
       };
     })();
