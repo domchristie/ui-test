@@ -16,6 +16,7 @@ group 'assets' do
   gem 'guard'
   gem 'guard-sass'
   gem 'guard-coffeescript'
+  gem 'guard-concat', git: 'https://github.com/mikz/guard-concat.git' # use mikz version to concat on start
   gem 'haml', '>= 3.0'
   gem 'sass' if RUBY_VERSION < "2.0"
   gem 'coffee-script', '>= 2.0'

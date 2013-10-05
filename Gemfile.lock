@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/mikz/guard-concat.git
+  revision: f19853684e676001c6c11a407bc37e2747134595
+  specs:
+    guard-concat (0.0.5)
+      guard (>= 1.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +69,7 @@ DEPENDENCIES
   coffee-script (>= 2.0)
   guard
   guard-coffeescript
+  guard-concat!
   guard-sass
   haml (>= 3.0)
   rack-test (>= 0.5.6)
