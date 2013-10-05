@@ -1,4 +1,9 @@
 (function() {
+  window.LP = {};
+
+}).call(this);
+
+(function() {
   $(function() {
     return window.LP = (function() {
       var initialHeight;
