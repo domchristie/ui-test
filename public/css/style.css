@@ -188,6 +188,7 @@ img {
 }
 
 .button {
+  display: inline-block;
   background-color: #1e344c;
   padding: 10px;
   color: white;
