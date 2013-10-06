@@ -13,12 +13,12 @@ class LP.ReadMoreWidget
   # Public methods
 
   expand: ->
-    @$el.css(height: 'auto')
+    @$el.css(maxHeight: 'none')
     @_isExpanded = true
     @_setButtonText()
 
   contract: ->
-    @$el.css(height: '')
+    @$el.css(maxHeight: '')
     @_isExpanded = false
     @_setButtonText()
 

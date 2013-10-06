@@ -7,7 +7,7 @@
 
     ReadMoreWidget.prototype.expand = function() {
       this.$el.css({
-        height: 'auto'
+        maxHeight: 'none'
       });
       this._isExpanded = true;
       return this._setButtonText();
@@ -15,7 +15,7 @@
 
     ReadMoreWidget.prototype.contract = function() {
       this.$el.css({
-        height: ''
+        maxHeight: ''
       });
       this._isExpanded = false;
       return this._setButtonText();
