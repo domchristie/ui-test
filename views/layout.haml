@@ -5,12 +5,12 @@
     :javascript
       var htmlEl = document.documentElement;
       htmlEl.className = htmlEl.className.replace(/\s*no-js/, 'js');
-    %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
-    %script{src: 'js/all.js'}
 
   %body
     = haml :nav
     = yield
     = haml :footer
 
+    %script{src: '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'}
+    %script{src: 'js/all.js'}
     
