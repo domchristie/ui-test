@@ -62,6 +62,7 @@
       if (this.expandedHeight > this.contractedHeight) {
         this._appendButton();
       }
+      this.$el.data('readMoreWidget', this);
     }
 
     ReadMoreWidget.prototype.expand = function() {

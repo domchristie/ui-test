@@ -3,6 +3,8 @@
 # ==============
 # Adds a show/hide toggle behaviour to a given element
 # By default, the behaviour is attached to `.read-more-container` elements
+# This behaviour can be triggered externally by accessing the ReadMoreWidget instance e.g.:
+# `$('.read-more-container').data('readMoreWidget').expand();`
 #
 
 class LP.ReadMoreWidget
@@ -10,6 +12,7 @@ class LP.ReadMoreWidget
   constructor: (@$el) ->
     @_getElDimensions()
     @_appendButton() if @expandedHeight > @contractedHeight
+    @$el.data('readMoreWidget', @)
 
   # Public methods
 
@@ -17,6 +20,7 @@ class LP.ReadMoreWidget
     @$el.animate(maxHeight: @expandedHeight)
     @_isExpanded = true
     @_setButtonText()
+
 
   contract: ->
     @$el.animate(maxHeight: @contractedHeight)
