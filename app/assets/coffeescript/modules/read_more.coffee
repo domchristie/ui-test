@@ -20,12 +20,13 @@ class LP.ReadMoreWidget
     @$el.animate(maxHeight: @expandedHeight)
     @_isExpanded = true
     @_setButtonText()
-
+    @$el
 
   contract: ->
     @$el.animate(maxHeight: @contractedHeight)
     @_isExpanded = false
     @_setButtonText()
+    @$el
 
   # _Private_ methods
 

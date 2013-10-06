@@ -70,7 +70,8 @@
         maxHeight: this.expandedHeight
       });
       this._isExpanded = true;
-      return this._setButtonText();
+      this._setButtonText();
+      return this.$el;
     };
 
     ReadMoreWidget.prototype.contract = function() {
@@ -78,7 +79,8 @@
         maxHeight: this.contractedHeight
       });
       this._isExpanded = false;
-      return this._setButtonText();
+      this._setButtonText();
+      return this.$el;
     };
 
     ReadMoreWidget.prototype._getElDimensions = function() {
