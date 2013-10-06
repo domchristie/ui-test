@@ -8,7 +8,8 @@
 class LP.ReadMoreWidget
 
   constructor: (@$el) ->
-    @_appendButton()
+    @_getElDimensions()
+    @_appendButton() if @expandedHeight > @contractedHeight
 
   # Public methods
 
@@ -23,6 +24,18 @@ class LP.ReadMoreWidget
     @_setButtonText()
 
   # _Private_ methods
+
+  _getElDimensions: ->
+    @contractedHeight = @$el.outerHeight()
+
+    $clone = @$el.clone().css(
+      height: 'auto'
+      maxHeight: 'none'
+    )
+    @$el.after($clone)
+
+    @expandedHeight = $clone.outerHeight()
+    $clone.remove()
 
   _appendButton: ->
     @$el.after @_createButton()

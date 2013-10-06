@@ -2,7 +2,10 @@
   LP.ReadMoreWidget = (function() {
     function ReadMoreWidget($el) {
       this.$el = $el;
-      this._appendButton();
+      this._getElDimensions();
+      if (this.expandedHeight > this.contractedHeight) {
+        this._appendButton();
+      }
     }
 
     ReadMoreWidget.prototype.expand = function() {
@@ -19,6 +22,19 @@
       });
       this._isExpanded = false;
       return this._setButtonText();
+    };
+
+    ReadMoreWidget.prototype._getElDimensions = function() {
+      var $clone;
+
+      this.contractedHeight = this.$el.outerHeight();
+      $clone = this.$el.clone().css({
+        height: 'auto',
+        maxHeight: 'none'
+      });
+      this.$el.after($clone);
+      this.expandedHeight = $clone.outerHeight();
+      return $clone.remove();
     };
 
     ReadMoreWidget.prototype._appendButton = function() {
