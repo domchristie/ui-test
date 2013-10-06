@@ -55,28 +55,63 @@
 }).call(this);
 
 (function() {
-  $(function() {
-    return window.LP = (function() {
-      var initialHeight;
+  LP.ReadMoreWidget = (function() {
+    function ReadMoreWidget($el) {
+      this.$el = $el;
+      this._appendButton();
+    }
 
-      initialHeight = 400;
-      return {
-        open: $('.button').on('click', function() {
-          if ($('.read-more-container').height() > 400) {
-            $('.read-more-container').animate({
-              height: initialHeight
-            }, 500);
-            $(this).text('Read more');
-          } else {
-            $('.read-more-container').animate({
-              height: 1600
-            }, 500);
-            $(this).text('Read less');
-          }
-          return false;
-        })
-      };
-    })();
+    ReadMoreWidget.prototype.expand = function() {
+      this.$el.css({
+        height: 'auto'
+      });
+      this._isExpanded = true;
+      return this._setButtonText();
+    };
+
+    ReadMoreWidget.prototype.contract = function() {
+      this.$el.css({
+        height: ''
+      });
+      this._isExpanded = false;
+      return this._setButtonText();
+    };
+
+    ReadMoreWidget.prototype._appendButton = function() {
+      return this.$el.after(this._createButton());
+    };
+
+    ReadMoreWidget.prototype._createButton = function() {
+      var $btn,
+        _this = this;
+
+      this.$btn = $btn = $('<a class="button" href="#" />');
+      this._setButtonText();
+      return $btn.on('click', function(evt) {
+        evt.preventDefault();
+        if (_this._isExpanded) {
+          return _this.contract();
+        } else {
+          return _this.expand();
+        }
+      });
+    };
+
+    ReadMoreWidget.prototype._setButtonText = function() {
+      var text;
+
+      text = this._isExpanded ? 'Read Less' : 'Read More';
+      return this.$btn.text(text);
+    };
+
+    return ReadMoreWidget;
+
+  })();
+
+  $(function() {
+    return $('.read-more-container').each(function(i, el) {
+      return new LP.ReadMoreWidget($(el));
+    });
   });
 
 }).call(this);
