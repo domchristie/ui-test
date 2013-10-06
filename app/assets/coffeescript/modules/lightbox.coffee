@@ -17,6 +17,7 @@ LP.lightbox = (->
     setContent(content) if content
     $('body').append($overlay)
     _positionContent()
+    $overlay
 
   close = ->
     $overlay.remove()

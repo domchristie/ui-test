@@ -10,7 +10,8 @@
         setContent(content);
       }
       $('body').append($overlay);
-      return _positionContent();
+      _positionContent();
+      return $overlay;
     };
     close = function() {
       return $overlay.remove();
