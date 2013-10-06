@@ -65,16 +65,16 @@
     }
 
     ReadMoreWidget.prototype.expand = function() {
-      this.$el.css({
-        maxHeight: 'none'
+      this.$el.animate({
+        maxHeight: this.expandedHeight
       });
       this._isExpanded = true;
       return this._setButtonText();
     };
 
     ReadMoreWidget.prototype.contract = function() {
-      this.$el.css({
-        maxHeight: ''
+      this.$el.animate({
+        maxHeight: this.contractedHeight
       });
       this._isExpanded = false;
       return this._setButtonText();
